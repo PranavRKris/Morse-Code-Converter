@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+
+        <script>
+            function validateErrors() {
+                var conversion = document.getElementById("conversion").value;
+                if (conversion == "none"){
+                    alert("Select Conversion Method")
+                    return false
+                }
+            }
+        </script>
+    </head>
+
+    <body style="margin:0;padding:0">
+        <div class="flexbox">
+            <div class="flexbox_container">
+                <form onsubmit="return validateErrors();" action="/submit" method="post">
+                    <div class="flexbox_header">
+                        <h1>Morse Code Translator</h1>
+                    </div>
+
+                    <div class="flexbox_select">
+                        <label for="conversion">Choose Conversion Method:</label>
+                        <select id="conversion" name="conversion">
+                            <option value="none" selected disabled hidden>Select an option</option>
+                            <option value="01">Convert from Morse to English</option>
+                            <option value="02">Convert from English to Morse</option>
+                        </select>
+                    </div>
+
+                    <div class="flexbox_input">
+                        <div class="flexbox_output">
+                            <label for="textinput">Input</label>
+                            <textarea id="textinput" name="textinput" placeholder="Enter the data you want to convert, - and . for morse code"
+                                rows="4" cols="50"></textarea>   
+                        </div>    
+                        <div class="flexbox_output">
+                            <label for="output">Output</label>
+                            <textarea id="output" name="output" rows="4" cols="50">{{output}}</textarea> 
+                        </div>
+                    </div>
+
+                    <div class="flexbox_submit">
+                        <button type="submit">SUBMIT</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
