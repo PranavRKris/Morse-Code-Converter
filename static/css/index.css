@@ -1,0 +1,51 @@
+textarea {
+    resize: none;
+}
+
+.flexbox{
+    display: flex;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #8b5299;
+    font-family: Arial;
+}
+
+.flexbox_container {
+    display: flex;
+    background-color: #efafe1;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+    margin: auto;
+    width: 70%;
+}
+
+.flexbox_header {
+    text-align: center;
+    color: #35484c;
+}
+
+.flexbox_select{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexbox_input {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.flexbox_output {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    width: 110%;
+    padding: 10px 0;
+    justify-content: space-around;
+}
+
+.flexbox_submit {
+    display: flex;
+    justify-content: center;
+}
